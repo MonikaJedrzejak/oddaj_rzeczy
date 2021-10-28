@@ -1,10 +1,17 @@
-
+import { BrowserRouter, Route, Switch} from 'react-router-dom';
+import Home from './components/Home.js';
 
 function App() {
   return (
-    <div>
-      Hello
-    </div>
+    <>
+            <BrowserRouter>
+                <Switch>
+                    <Route exact path="/" component={Home}/>
+                    {/* <Route exact path="/pokemons/:pokemonName" component={Pokemon}/> */}
+                    {/* <Route component={NotFound}/> */}
+                </Switch>
+            </BrowserRouter>
+            </>
   );
 }
 
