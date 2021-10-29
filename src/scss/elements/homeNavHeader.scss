@@ -2,6 +2,11 @@ header {
 	position: absolute;
 	width: 100vw;
 }
+.home-nav {
+	@include mobile {
+		display: none;
+	}
+}
 .home-nav-login {
 	margin-top: 5rem;
 }
@@ -40,7 +45,6 @@ header {
 	justify-content: flex-end;
 }
 
-
 .btn-header {
 	background-color: white;
 	font-size: 3.6rem;
@@ -57,35 +61,43 @@ header {
 		text-decoration: none;
 		color: $c-font-primary;
 		font-weight: 300;
-		
 	}
 }
 
 .header-btn-container {
-		display: flex;
+	display: flex;
+	flex-direction: column;
+	@include tablet {
+		flex-direction: row;
 	}
+}
 
 .header-title {
-font-size: 3.8rem;
-text-align: center;
+	font-size: 3.8rem;
+	text-align: center;
 }
 .header-text-container {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	margin: 36rem 0;
-	width: 50vw;
+	margin: 10rem 0;
+	@include tablet {
+		// width: 50vw;
+		margin: 36rem 0;
+	}
+	
 }
 .home-header-container {
 	display: flex;
 }
 .header-image {
-background-image: url("../../assets/Home-Hero-Image.jpg");
-background-position: right;
-background-repeat: no-repeat;
-width: 50vw;
-height: auto;
-display: block;
-top: 0;
+	@include tablet {
+		background-image: url("../../assets/Home-Hero-Image.jpg");
+		background-position: right;
+		background-repeat: no-repeat;
+		width: 50vw;
+		height: auto;
+		display: block;
+	}
 }

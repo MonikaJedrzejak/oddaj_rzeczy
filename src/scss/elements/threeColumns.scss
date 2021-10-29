@@ -7,17 +7,18 @@
     display: flex;
 }
 .home-three-col {
-    margin: 5rem 10rem;
+    // margin: 5rem 10rem;
 
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     @include tablet {
         display: flex;
         flex-direction: row;
         justify-content: center;
         align-items: center;
+        margin: 5rem 10rem;
     }
 
     .col-number {
