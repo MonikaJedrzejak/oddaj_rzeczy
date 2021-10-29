@@ -1,9 +1,15 @@
 @import "generic/reset";
 @import "settings/all";
+@import "elements/homeNavHeader";
+@import "elements/threeColumns";
 
-// @import "elements/game";
-
+html {
+	font-size: 62.5%;
+}
 body {
-	color: blue;
+	color: $c-font-primary;
 	font-family: $font-base;
+}
+.container {
+	max-width: 1200px;
 }

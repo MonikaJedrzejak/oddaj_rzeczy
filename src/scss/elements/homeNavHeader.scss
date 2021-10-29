@@ -1,0 +1,94 @@
+// header {
+// &.home-nav {
+// 	width: 50vw;
+// }}
+.home-nav-login {
+	margin-top: 5rem;
+}
+.btn {
+	text-decoration: none;
+	margin: 20px 20px;
+}
+.btn:hover {
+	text-decoration: none;
+}
+.login-btn {
+	color: $c-font-secondary;
+	font-size: 1.3rem;
+}
+.login-item {
+	padding: 0.9rem 1rem;
+	border: 1px solid white;
+	&:hover {
+		border: 1px solid $c-main-yellow;
+	}
+}
+.menu-btn {
+	color: $c-font-primary;
+	font-size: 1.8rem;
+}
+
+.menu-item {
+	padding: 0.9rem 2rem;
+	border: 1px solid white;
+	&:hover {
+		border: 1px solid $c-font-primary;
+	}
+}
+.home-menu {
+	display: flex;
+	justify-content: flex-end;
+}
+
+.decoration {
+	background-image: url("../../assets/Decoration.svg");
+	background-position: cover;
+}
+.btn-header {
+	background-color: white;
+	font-size: 3.6rem;
+	padding: 1.3rem 9rem;
+	border: 1px solid $c-font-primary;
+	max-width: 310px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	&:hover {
+		border: 1px solid $c-main-yellow;
+	}
+	a {
+		text-decoration: none;
+		color: $c-font-primary;
+		font-weight: 300;
+		
+	}
+}
+
+.header-btn-container {
+		display: flex;
+	}
+
+.header-title {
+font-size: 3.8rem;
+text-align: center;
+}
+.header-text-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin: 36rem 0;
+	width: 50vw;
+}
+.home-header-container {
+	display: flex;
+}
+.header-image {
+background-image: url("../../assets/Home-Hero-Image.jpg");
+background-position: right;
+background-repeat: no-repeat;
+width: 50vw;
+height: auto;
+display: block;
+top: 0;
+}
