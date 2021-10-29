@@ -1,7 +1,7 @@
-// header {
-// &.home-nav {
-// 	width: 50vw;
-// }}
+header {
+	position: absolute;
+	width: 100vw;
+}
 .home-nav-login {
 	margin-top: 5rem;
 }
@@ -40,10 +40,7 @@
 	justify-content: flex-end;
 }
 
-.decoration {
-	background-image: url("../../assets/Decoration.svg");
-	background-position: cover;
-}
+
 .btn-header {
 	background-color: white;
 	font-size: 3.6rem;
