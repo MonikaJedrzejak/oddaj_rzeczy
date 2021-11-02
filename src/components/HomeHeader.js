@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 import decorator from '../assets/Decoration.svg';
 
 export default function HomeHeader() {
@@ -10,8 +11,8 @@ export default function HomeHeader() {
         <h2 className="header-title">Oddaj niechciane rzeczy w zaufane ręce</h2>
         <img src={decorator} alt="decoration" className="decoration"/>
         <div className="header-btn-container">
-            <button className="btn btn-header"><a href="#Home" >ODDAJ RZECZY</a></button>
-            <button className="btn btn-header"><a href="#Home" >ZORGANIZUJ ZBIÓRKĘ</a></button>
+            <button className="btn btn-header"><Link to="/login" >ODDAJ RZECZY</Link></button>
+            <button className="btn btn-header"><Link to="/login" >ZORGANIZUJ ZBIÓRKĘ</Link></button>
         </div>
         </div>
         </div>

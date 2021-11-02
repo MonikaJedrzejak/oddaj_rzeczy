@@ -1,34 +1,48 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import { Link as ScrollLink } from "react-scroll";
 
-export default function HomeNav() {
+export default function HomeNav({ duration }) {
 	return (
 		<header className="home-nav">
 			<nav className="home-nav-login">
 				<ul className="home-menu">
 					<li className="home-menu-item login-item">
-						<a className="btn login-btn" href="#LogIn">Zaloguj</a>
+						<Link to="/login" className="btn login-btn">Zaloguj</Link>
 					</li>
 					<li className="home-menu-item login-item">
-						<a className="btn login-btn"href="#SignIn">Załóż konto</a>
+						<Link to="/register" className="btn login-btn">Załóż konto</Link>
 					</li>
 				</ul>
 			</nav>
+
 			<nav className="home-nav-menu">
 				<ul className="home-menu">
 					<li className="home-menu-item menu-item">
-						<a className="btn menu-btn" href="#Start">Start</a>
+						{/* <a className="btn menu-btn" href="#Start">Start</a> */}
+						<ScrollLink to="/" smooth={true} duration={duration} className="btn menu-btn">
+							Start
+						</ScrollLink>
 					</li>
 					<li className="home-menu-item menu-item">
-						<a className="btn menu-btn" href="#About">O co chodzi?</a>
+						<ScrollLink to="/" smooth={true} duration={duration} className="btn menu-btn">
+							O co chodzi?
+						</ScrollLink>
 					</li>
 					<li className="home-menu-item menu-item">
-						<a className="btn menu-btn" href="#AboutUs">O nas</a>
+						<ScrollLink to="/" smooth={true} duration={duration} className="btn menu-btn">
+						O nas
+						</ScrollLink>
 					</li>
 					<li className="home-menu-item menu-item">
-						<a className="btn menu-btn" href="#Organizations">Fundacja i organizacje</a>
+						<ScrollLink to="/" smooth={true} duration={duration} className="btn menu-btn">
+						Fundacja i organizacje
+						</ScrollLink>
 					</li>
 					<li className="home-menu-item menu-item">
-						<a className="btn menu-btn" href="#Contact">Kontakt</a>
+						<ScrollLink to="/" smooth={true} duration={duration} className="btn menu-btn">
+						Kontakt
+						</ScrollLink>
 					</li>
 				</ul>
 			</nav>
