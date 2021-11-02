@@ -20,27 +20,27 @@ export default function HomeNav({ duration }) {
 				<ul className="home-menu">
 					<li className="home-menu-item menu-item">
 						{/* <a className="btn menu-btn" href="#Start">Start</a> */}
-						<ScrollLink to="/" smooth={true} duration={duration} className="btn menu-btn">
+						<ScrollLink to="HomeHeader" smooth={true} duration={duration} spy={true} className="btn menu-btn">
 							Start
 						</ScrollLink>
 					</li>
 					<li className="home-menu-item menu-item">
-						<ScrollLink to="/" smooth={true} duration={duration} className="btn menu-btn">
+						<ScrollLink to="HomeFourSteps" smooth={true} duration={duration} spy={true} className="btn menu-btn">
 							O co chodzi?
 						</ScrollLink>
 					</li>
 					<li className="home-menu-item menu-item">
-						<ScrollLink to="/" smooth={true} duration={duration} className="btn menu-btn">
+						<ScrollLink to="HomeAboutUs" smooth={true} duration={duration} spy={true} className="btn menu-btn">
 						O nas
 						</ScrollLink>
 					</li>
 					<li className="home-menu-item menu-item">
-						<ScrollLink to="/" smooth={true} duration={duration} className="btn menu-btn">
+						<ScrollLink to="HomeOrganizations" smooth={true} duration={duration} spy={true} className="btn menu-btn">
 						Fundacja i organizacje
 						</ScrollLink>
 					</li>
 					<li className="home-menu-item menu-item">
-						<ScrollLink to="/" smooth={true} duration={duration} className="btn menu-btn">
+						<ScrollLink to="HomeContact" smooth={true} duration={duration} spy={true} className="btn menu-btn">
 						Kontakt
 						</ScrollLink>
 					</li>
