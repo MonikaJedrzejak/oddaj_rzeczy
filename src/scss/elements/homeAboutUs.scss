@@ -3,23 +3,43 @@
     display: flex;
     flex-direction: column-reverse;
     @include tablet {
+        display: flex;
         flex-direction: row;
+    }
+}
+.AboutUs-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    @include tablet {
+        width: 50%;
+        margin: 4rem 6rem;
+    }
+}
+
+.AboutUs-right {
+    margin: auto;
+    width: 100%;
+
+    @include tablet {
+        width: 50%;
     }
 }
 
 .AboutUs-image {
-    background-image: url(../../assets/People.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-    width: 100vw;
-    height: 300px;
-    @include tablet {
-        width: 50vw;
-        height: auto;
-        // background-size: cover;
-        background-position: cover;
-    }
+    width: 100%;
+}
+
+
+
+
+
+.AboutUs-signature {
+    margin-top: 3rem;
+    align-self: flex-end;
 }
 .AboutUs-title {
     font-size: 3.8rem;
@@ -29,20 +49,4 @@
     font-size: 3rem;
 }
 
-.AboutUs-left {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    width: 100vw;
-    
-    @include tablet {
-        width: 50vw;
-        margin: 4rem 6rem;
-    }
-}
-.AboutUs-signature {
-    margin-top: 3rem;
-    align-self: flex-end;
-}
+
