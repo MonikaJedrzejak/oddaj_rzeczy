@@ -2,6 +2,7 @@
 @import "settings/all";
 @import "elements/homeNavHeader";
 @import "elements/threeColumns";
+@import "elements/fourSteps";
 
 html {
 	font-size: 62.5%;
@@ -11,7 +12,7 @@ body {
 	font-family: $font-base;
 }
 .container {
-	max-width: 1200px;
+	max-width: 1400px;
 }
 .decoration {
 	margin: 3rem 0;
