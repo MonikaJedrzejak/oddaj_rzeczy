@@ -4,6 +4,8 @@
 @import "elements/threeColumns";
 @import "elements/homeFourSteps";
 @import "elements/homeAboutUs";
+@import "elements/homeOrganizations";
+@import "elements/homeContact";
 @import "elements/homeFooter";
 
 html {
@@ -18,4 +20,7 @@ body {
 }
 .decoration {
 	margin: 3rem 0;
+}
+.btn {
+	font-family: $font-base;
 }

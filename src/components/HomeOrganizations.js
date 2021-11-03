@@ -7,7 +7,7 @@ export default function HomeOrganizations() {
             <div className="container">
                 <h3 className="Org-Title">Komu pomagamy?</h3>
                 <img src={decorator} alt="decoration" className="decoration" />
-                <div>
+                <div className="Org-buttons">
                     <button className="btn btn-org">Fundacjom</button>
                     <button className="btn btn-org">Organizacjom pozarządowym</button>
                     <button className="btn btn-org">Lokalnym zbiórkom</button>
