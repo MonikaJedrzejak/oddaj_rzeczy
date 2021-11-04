@@ -18,6 +18,9 @@
             border: 1px solid $c-font-primary;
         }
     }
+.btn active {
+    border: 1px solid $c-font-primary;
+    }
 .Org-buttons {
     display: flex;
     // justify-content: space-between;

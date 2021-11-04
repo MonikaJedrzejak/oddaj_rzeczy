@@ -1,5 +1,6 @@
 import { BrowserRouter, Route, Switch} from 'react-router-dom';
 import Home from './components/Home.js';
+import Login from './components/Login.js';
 
 function App() {
   return (
@@ -7,7 +8,7 @@ function App() {
             <BrowserRouter>
                 <Switch>
                     <Route exact path="/" component={Home}/>
-                    {/* <Route exact path="/pokemons/:pokemonName" component={Pokemon}/> */}
+                    <Route exact path="/login" component={Login}/>
                     {/* <Route component={NotFound}/> */}
                 </Switch>
             </BrowserRouter>
