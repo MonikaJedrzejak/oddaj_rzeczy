@@ -1,12 +1,12 @@
 import React from 'react';
-import HomeNav from './HomeNav';
+import Nav from './Nav';
 import { Link } from "react-router-dom";
 import decorator from "../assets/Decoration.svg";
 
 export default function Login() {
     return (
         <div className="login-view">
-            <HomeNav />
+            <Nav />
            
             <div className="login-container">
 <h3 className="login-title">Zaloguj się</h3>

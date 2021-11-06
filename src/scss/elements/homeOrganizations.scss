@@ -17,6 +17,9 @@
         &:hover {
             border: 1px solid $c-font-primary;
         }
+        &:focus {
+            border: 1px solid $c-font-primary;
+        }
     }
 .btn active {
     border: 1px solid $c-font-primary;
@@ -36,8 +39,34 @@
         justify-content: center;
         align-items: center;
     }
-    p {
+    .org-desc {
         font-size:2.2rem;
         max-width: 64rem;
+        margin-bottom: 2rem;
     }
+}
+
+.org-table-row {
+    border: 1px solid white;
+    border-bottom: 1px solid $c-font-primary;
+    font-family: $font-alt;
+    margin-bottom: 2rem;
+}
+.table-name {
+    font-size: 2.6rem;
+    font-weight: 300;
+}
+.table-desc {
+    font-size: 1.8rem;
+    font-weight: 300;
+}
+.table-stuff {
+    font-size: 1.8rem;
+    font-weight: 300;
+}
+.org-table-col {
+    border: 1px solid white;
+    border-bottom: 1px solid $c-font-primary;
+    font-family: $font-alt;
+    padding: 2rem 0;
 }

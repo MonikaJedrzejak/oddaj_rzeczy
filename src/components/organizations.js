@@ -2,51 +2,51 @@
     {
         "recipient": "Fundacjom",
         "title": "W naszej bazie znajdziesz listę zweryfikowanych Fundacji, z którymi współpracujemy. Możesz sprawdzić czym się zajmują, komu pomagają i czego potrzebują.",
-        "list": [
+        foundation: [
             {
-                "name": 'Fundacja "Dbam o Zdrowie"',
-                "description": "Cel i misja: Pomoc osobom znajdującym się w trudnej sytuacji życiowej.",
-                "stuff": "ubrania, jedzenie, sprzęt AGD, meble, zabawki"
+                name: 'Fundacja "Dbam o Zdrowie"',
+                description: "Cel i misja: Pomoc osobom znajdującym się w trudnej sytuacji życiowej.",
+                stuff: "ubrania, jedzenie, sprzęt AGD, meble, zabawki"
             },
             {
-                "name": 'Fundacja "Dla dzieci"',
-                "description": "Cel i misja: Pomoc dzieciom z ubogich rodzin.",
-                "stuff": "ubrania, meble, zabawki"
+                name: 'Fundacja "Dla dzieci"',
+                description: "Cel i misja: Pomoc dzieciom z ubogich rodzin.",
+                stuff: "ubrania, meble, zabawki"
             },
             {
-                "name": 'Fundacja "Bez domu"',
-                "description": "Cel i misja: Pomoc dla osób nie posiadających miejsca zamieszkania.",
-                "stuff": "ubrania, jedzenie, ciepłe koce"
+                name: 'Fundacja "Bez domu"',
+                description: "Cel i misja: Pomoc dla osób nie posiadających miejsca zamieszkania.",
+                stuff: "ubrania, jedzenie, ciepłe koce"
             },
             {
-                "name": 'Fundacja "Dzieci są ważne"',
-                "description": "Cel i misja: Pomoc dzieciom znajdującym się w trudnej sytuacji życiowej.",
-                "stuff": "buty, ubrania, jedzenie, sprzęt AGD, zabawki"
+                name: 'Fundacja "Dzieci są ważne"',
+                description: "Cel i misja: Pomoc dzieciom znajdującym się w trudnej sytuacji życiowej.",
+                stuff: "buty, ubrania, jedzenie, sprzęt AGD, zabawki"
             },
             {
-                "name": 'Fundacja "Zwierzakom"',
-                "description": "Cel i misja: Pomoc zwierzakom z ubogich rodzin.",
-                "stuff": "jedzenie, koce, stare ubrania"
+                name: 'Fundacja "Zwierzakom"',
+                description: "Cel i misja: Pomoc zwierzakom z ubogich rodzin.",
+                stuff: "jedzenie, koce, stare ubrania"
             },
             {
-                "name": 'Fundacja "Pomoc seniorom"',
-                "description": "Cel i misja: Pomoc dla osób starszych.",
-                "stuff": "znowu ubrania, jedzenie, ciepłe koce, książki"
+                name: 'Fundacja "Pomoc seniorom"',
+                description: "Cel i misja: Pomoc dla osób starszych.",
+                stuff: "znowu ubrania, jedzenie, ciepłe koce, książki"
             },
             {
-                "name": 'Fundacja "Znowu dbam o Zdrowie"',
-                "description": "Cel i misja: Znowu pomoc osobom znajdującym się w trudnej sytuacji życiowej.",
-                "stuff": "znowu ubrania, jedzenie, sprzęt AGD, meble, zabawki"
+                name: 'Fundacja "Znowu dbam o Zdrowie"',
+                description: "Cel i misja: Znowu pomoc osobom znajdującym się w trudnej sytuacji życiowej.",
+                stuff: "znowu ubrania, jedzenie, sprzęt AGD, meble, zabawki"
             },
             {
-                "name": 'Fundacja "Znowu dla dzieci"',
-                "description": "Cel i misja: Znowu pomoc dzieciom z ubogich rodzin.",
-                "stuff": "znowu ubrania, meble, zabawki"
+                name: 'Fundacja "Znowu dla dzieci"',
+                description: "Cel i misja: Znowu pomoc dzieciom z ubogich rodzin.",
+                stuff: "znowu ubrania, meble, zabawki"
             },
             {
-                "name": 'Fundacja "Znowu bez domu"',
-                "description": "Cel i misja: Znowu pomoc dla osób nie posiadających miejsca zamieszkania.",
-                "stuff": "znowu ubrania, jedzenie, ciepłe koce"
+                name: 'Fundacja "Znowu bez domu"',
+                description: "Cel i misja: Znowu pomoc dla osób nie posiadających miejsca zamieszkania.",
+                stuff: "znowu ubrania, jedzenie, ciepłe koce"
             }
         ]
     },
