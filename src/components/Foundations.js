@@ -22,7 +22,7 @@ export default function Foundations({ table }) {
 				))}
 			</div>
 			<div>
-				pa
+				padd
 			</div>
 		</>
 	);
