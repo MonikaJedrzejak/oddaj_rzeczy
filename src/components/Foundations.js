@@ -21,6 +21,9 @@ export default function Foundations({ table }) {
 					</tr>
 				))}
 			</div>
+			<div>
+				pa
+			</div>
 		</>
 	);
 }
