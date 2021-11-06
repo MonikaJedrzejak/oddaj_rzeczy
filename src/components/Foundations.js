@@ -1,6 +1,7 @@
 import React from "react";
 
-export default function Foundations({ table }) {
+export default function Foundations({ table, page }) {
+
 	return (
 		<>
 			<p className="org-desc">
@@ -9,7 +10,7 @@ export default function Foundations({ table }) {
 				potrzebują.
 			</p>
 			<div div className="org-table">
-				{table.map(({ name, description, stuff }, idx) => (
+				{table.filter((el,idx)=> (idx >= (page*3)-2) && (idx <= (page*3))).map(({ name, description, stuff }, idx) => (
 					<tr className="org-table-row">
 						<td className="org-table-col">
 							<p className="table-name">{name}</p>
@@ -20,9 +21,6 @@ export default function Foundations({ table }) {
 						</td>
 					</tr>
 				))}
-			</div>
-			<div>
-				padd
 			</div>
 		</>
 	);

@@ -70,3 +70,8 @@
     font-family: $font-alt;
     padding: 2rem 0;
 }
+
+.Org-pagination {
+    display: flex;
+    flex-direction: row;
+}

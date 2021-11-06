@@ -108,16 +108,35 @@ const local = [
 
 export default function HomeOrganizations() {
 	const [table, setTable] = useState(foundation);
-	console.log(table);
+	const [num, setNum] = useState(1);
+
 	const handleClickFoundation = () => {
 		setTable(foundation);
+		setNum(1);
 	}
 	const handleClickOrganizations = () => {
 		setTable(organizations);
+		setNum(1);
 	}
 	const handleClickLocal = () => {
 		setTable(local);
+		setNum(1);
 	}
+	const pages = Math.ceil(table.length/3);
+	
+	const createPages = () => {
+		let table = [];
+		for (let i = 1; i <= pages; i++) {
+			
+		  table.push(<div>
+			{
+			  <button className="btn btn-org" onClick={()=> setNum(i)}>{i}</button>
+			}
+		  </div>)
+		}
+		return table
+	  }
+
 	return (
 		<div className="HomeOrganizations">
 			<div className="container">
@@ -128,7 +147,10 @@ export default function HomeOrganizations() {
 					<button className="btn btn-org" onClick={handleClickOrganizations} >Organizacjom pozarządowym</button>
 					<button className="btn btn-org" onClick={handleClickLocal}>Lokalnym zbiórkom</button>
 				</div>
-			<Foundations table={table}/>
+			<Foundations table={table} page={num}/>
+			<div>
+				<div className="Org-pagination">{createPages()}</div>
+			</div>
 			</div>
 		</div>
 	);
