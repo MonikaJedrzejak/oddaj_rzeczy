@@ -10,7 +10,7 @@ export default function Foundations({ table, page }) {
 				potrzebują.
 			</p>
 			<div div className="org-table">
-				{table.filter((el,idx)=> (idx >= (page*3)-2) && (idx <= (page*3))).map(({ name, description, stuff }, idx) => (
+				{table.filter((el,idx)=> (idx+1 >= (page*3)-2) && (idx+1 <= (page*3))).map(({ name, description, stuff }, idx) => (
 					<tr className="org-table-row">
 						<td className="org-table-col">
 							<p className="table-name">{name}</p>
