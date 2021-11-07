@@ -50,8 +50,6 @@ export default function HomeContact() {
     };
 
 
-
-
 	return (
 		<div className="HomeContact" href="#Contact">
 			<div className="Contact-background">
