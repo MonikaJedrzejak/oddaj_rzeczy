@@ -1,8 +1,10 @@
 import React, {useState} from "react";
 import decorator from "../assets/Decoration.svg";
 import validator from 'validator';
+import axios from "axios";
 
 export default function HomeContact() {
+    const [serverResponse, setServerResponse] = useState('');
 	const [formData, setFormData] = useState({
         name: "",
 		mail: "",
@@ -13,7 +15,7 @@ export default function HomeContact() {
 		mail: "",
         message: "",
     });
-    // const [user, setUser] = useState(null);
+
     const handleChange = (e) => {
         const { name, value } = e.target;
         setFormData((prev) => ({
@@ -21,7 +23,44 @@ export default function HomeContact() {
             [name]: value,
         }));
     };
+const sendMessage = () => {
+    axios.post('https://fer-api.coderslab.pl/v1/portfolio/contact', {
+            formData
+        })
+            .then(response => {
+                console.log(response);
+                if (response.status === 200) {
+                    setServerResponse('Wiadomość została wysłana! Wkrótce się skontaktujemy!');
+                    setFormData({ name: "", mail: "", message: ""});
+                    setTimeout(()=>{
+                        setServerResponse('');
+                    },3000)
+                }
+            })
+            .catch(error => {
+                console.log(error);
+            });
+    // fetch(`https://fer-api.coderslab.pl/v1/portfolio/contact`, {
+    //             method: "POST",
+    //             body: JSON.stringify(formData),
+    //             headers: {
+    //               "Content-Type": "application/json"
+    //             }
+    //           })
+    //           .catch(error => {
+    //             console.log(error.errors);
+    //           })
+    //             .then(response => {
+                    
+    //                 console.log(response);
+    //                 if (response.status === 200) {
+    //                     setServerResponse('Wiadomość została wysłana! Wkrótce się skontaktujemy!');
+    //                     // setFormData({ name: "", mail: "", message: ""});
+    //                 }
+    //             });
+                
 
+}
     const handleSubmit = (e) => {
         e.preventDefault();
         const { name, mail, message } = formData;
@@ -37,15 +76,9 @@ export default function HomeContact() {
 		// console.log(error);
 
         if (!error.name && !error.mail && !error.message) {
-            // FakeAPI.login(formData)
-            //     .then((user) => {
-            //         console.log(user);
-            //         setUser(user);
-            //     })
-            //     .catch((err) => {
-            //         console.log(err);
-            //     });
-            setFormData({ name: "", mail: "", message: ""});
+            console.log(formData);
+            sendMessage();
+            // setFormData({ name: "", mail: "", message: ""});
         }
     };
 
@@ -56,6 +89,9 @@ export default function HomeContact() {
 				<div className="Contact-container">
 					<h3 className="Contact-title">Skontaktuj się z nami</h3>
 					<img src={decorator} alt="decoration" className="decoration" />
+                    {
+                            serverResponse && <h3 className="message-sent">{serverResponse}</h3>
+                        }
 					<form className="Contact-form" onSubmit={handleSubmit}>
 						<div className="Contact-input-row">
 							<div className="Contact-input">
