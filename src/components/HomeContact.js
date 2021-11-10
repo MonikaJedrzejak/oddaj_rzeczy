@@ -7,12 +7,12 @@ export default function HomeContact() {
     const [serverResponse, setServerResponse] = useState('');
 	const [formData, setFormData] = useState({
         name: "",
-		mail: "",
+		email: "",
         message: "",
     });
     const [error, setError] = useState({
         name: "",
-		mail: "",
+		email: "",
         message: "",
     });
 
@@ -47,6 +47,7 @@ const sendMessage = () => {
                   "Content-Type": "application/json"
                 }
               })
+              .then(r => r.json())
                 .then(response => {
                     
                     console.log(response);
@@ -63,19 +64,19 @@ const sendMessage = () => {
 }
     const handleSubmit = (e) => {
         e.preventDefault();
-        const { name, mail, message } = formData;
+        const { name, email, message } = formData;
 		// console.log(formData);
         setError({
             name:
                 name.length < 2 ? "Username musi miec wiecej niz 2 znaki" : "",
-            mail:
-                !(validator.isEmail(mail)) ? "Nieprawidłowy email" : "",
+            email:
+                !(validator.isEmail(email)) ? "Nieprawidłowy email" : "",
 			message:
 				message.length < 120 ? "Wiadomość musi miec conajmniej 120 znaków" : "",
         });
 		// console.log(error);
 
-        if (!error.name && !error.mail && !error.message) {
+        if (!error.name && !error.email && !error.message) {
             console.log(formData);
             sendMessage();
             // setFormData({ name: "", mail: "", message: ""});
@@ -106,15 +107,15 @@ const sendMessage = () => {
                     <span className="form-err">{error?.name}</span>
 							</div>
 							<div className="Contact-input">
-								<label for="mail">Wpisz swój email</label>
+								<label for="email">Wpisz swój email</label>
 								<input
                         type="text"
-                        name="mail"
+                        name="email"
 						placeholder="abc@xyz.pl"
-                        value={formData.mail}
+                        value={formData.email}
                         onChange={handleChange}
                     />
-                    <span className="form-err">{error?.mail}</span>
+                    <span className="form-err">{error?.email}</span>
 						</div>
 						</div>
 						<label for="message">Wpisz swoją wiadomość</label>
