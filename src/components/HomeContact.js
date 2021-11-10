@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import decorator from "../assets/Decoration.svg";
 import validator from 'validator';
-import axios from "axios";
+// import axios from "axios";
 
 export default function HomeContact() {
     const [serverResponse, setServerResponse] = useState('');
@@ -16,48 +16,48 @@ export default function HomeContact() {
         message: "",
     });
 
-    const handleChange = (e) => {
-        const { name, value } = e.target;
-        setFormData((prev) => ({
-            ...prev,
-            [name]: value,
-        }));
-    };
+    const handleChange = (event) => {
+        setFormData({
+          ...formData,
+          [event.target.name]: event.target.value,
+        });
+      };
+
 const sendMessage = () => {
-    axios.post('https://fer-api.coderslab.pl/v1/portfolio/contact', {
-            formData
-        })
-            .then(response => {
-                console.log(response);
-                if (response.status === 200) {
-                    setServerResponse('Wiadomość została wysłana! Wkrótce się skontaktujemy!');
-                    setFormData({ name: "", mail: "", message: ""});
-                    setTimeout(()=>{
-                        setServerResponse('');
-                    },3000)
-                }
-            })
-            .catch(error => {
-                console.log(error);
-            });
-    // fetch(`https://fer-api.coderslab.pl/v1/portfolio/contact`, {
-    //             method: "POST",
-    //             body: JSON.stringify(formData),
-    //             headers: {
-    //               "Content-Type": "application/json"
+    // axios.post('https://fer-api.coderslab.pl/v1/portfolio/contact', {
+    //         formData
+    //     })
+    //         .then(response => {
+    //             console.log(response);
+    //             if (response.status === 200) {
+    //                 setServerResponse('Wiadomość została wysłana! Wkrótce się skontaktujemy!');
+    //                 setFormData({ name: "", mail: "", message: ""});
+    //                 setTimeout(()=>{
+    //                     setServerResponse('');
+    //                 },3000)
     //             }
-    //           })
-    //           .catch(error => {
-    //             console.log(error.errors);
-    //           })
-    //             .then(response => {
+    //         })
+    //         .catch(error => {
+    //             console.log(error);
+    //         });
+    fetch(`https://fer-api.coderslab.pl/v1/portfolio/contact`, {
+                method: "POST",
+                body: JSON.stringify(formData),
+                headers: {
+                  "Content-Type": "application/json"
+                }
+              })
+                .then(response => {
                     
-    //                 console.log(response);
-    //                 if (response.status === 200) {
-    //                     setServerResponse('Wiadomość została wysłana! Wkrótce się skontaktujemy!');
-    //                     // setFormData({ name: "", mail: "", message: ""});
-    //                 }
-    //             });
+                    console.log(response);
+                    if (response.status === 200) {
+                        setServerResponse('Wiadomość została wysłana! Wkrótce się skontaktujemy!');
+                        // setFormData({ name: "", mail: "", message: ""});
+                    }
+                })
+                .catch(error => {
+                    console.log(error.errors);
+                  });
                 
 
 }
